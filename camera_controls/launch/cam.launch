@@ -2,4 +2,7 @@
 	<node name="udp_receiver" pkg="nimbro_topic_transport" type="udp_receiver" output="screen">
 		<param name="port" value="17001" />
 	</node>
+    <node name="nimbro_cam" pkg="nimbro_cam_transport" type="reciver">
+        <remap from="/main_cam/image_comp" to="~encoded"/>
+</node>
 </launch>
